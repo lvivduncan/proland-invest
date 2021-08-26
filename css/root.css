@@ -17,6 +17,7 @@
     --dark: #13162b;
     --cyan: #3fb8bd;
     --gray: #ccc;
+    --gray-dark: #818181;
     --light: #f4f8fb;
     /* #13162b */
 }
@@ -25,6 +26,12 @@ body
 {
     font-family: sans-serif;
     color: var(--black);
+}
+
+img
+{
+    max-width: 100%!important;
+    height: auto!important;
 }
 
 .wrapper

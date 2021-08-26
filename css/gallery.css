@@ -1,0 +1,45 @@
+#gallery
+{
+    margin: 60px 0;
+}
+
+#gallery .wrapper
+{
+    width: 1090px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+
+/* 480*340 */
+#gallery a
+{
+    text-decoration: none;
+    background: var(--dark);
+    transition: .5s;
+}
+
+#gallery a:hover
+{
+    background: var(--cyan);
+}
+
+#gallery span
+{
+    display: inline-block;
+    padding: 0 10px 10px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+#gallery picture
+{
+    transition: .5s;
+    transform: translate(-10px,-10px);
+    display: block;
+}
+
+#gallery a:hover picture
+{
+    transform: translate(0,-10px);
+}

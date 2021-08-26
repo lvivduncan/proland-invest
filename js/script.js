@@ -27,9 +27,13 @@
     const slides = slider.querySelectorAll('picture');
     const left = slider.querySelector('.slider-left');
     const right = slider.querySelector('.slider-right');
+    const numbers = slider.querySelector('.slider-numbers');
     const length = slides.length;
 
     let counter = 0;
+
+    // set primary data
+    numbers.innerHTML = `<strong>${length}</strong><span>${counter+1}</span>`;
 
     left.addEventListener('click', toLeft);
 
@@ -57,6 +61,8 @@
         }
 
         slides[counter].classList.add('active');
+
+        numbers.innerHTML = `<strong>${length}</strong><span>${counter+1}</span>`;
     }
 
     function toRight(){
@@ -71,5 +77,7 @@
         }
 
         slides[counter].classList.add('active');
+
+        numbers.innerHTML = `<strong>${length}</strong><span>${counter+1}</span>`;
     }
 }
