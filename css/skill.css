@@ -1,0 +1,16 @@
+
+#skill
+{
+    margin: 5px 0 10px;
+}
+
+#skill .wrapper
+{
+    width: 1100px;
+    min-height: 140px;
+    background: var(--black);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+    text-align: center;
+}

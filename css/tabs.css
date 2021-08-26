@@ -1,0 +1,183 @@
+
+/* block under header */
+#tabs
+{
+    background: var(--dark);
+    height: 630px;
+    position: relative;
+    /* z-index: -2; */
+    z-index: 1;
+}
+
+#tabs .wrapper
+{
+    height: 630px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    z-index: 2;
+}
+
+#tabs .wrapper picture
+{
+    width: 100%;
+    height: 630px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: -1; */
+    z-index: 3;
+}
+
+#tabs .wrapper picture::before
+{
+    content: '';
+    width: 100%;
+    height: 630px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.25);
+}
+
+#tabs .wrapper picture::after
+{
+    content: '';
+    width: calc(100% / 3);
+    height: 630px;
+    position: absolute;
+    top: 0;
+    left: calc(100% / 3);
+    background: rgba(0,0,0,.5);
+}
+
+#tabs h1
+{
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+    z-index: 4;
+}
+
+#tabs h1::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--cyan);
+}
+
+#tabs h1::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--cyan);
+}
+
+/* tabs */
+#tabs .tabs
+{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+}
+
+#tabs .tabs ul
+{
+    display: block;
+    margin: 40px 0;
+    text-align: center;
+}
+
+#tabs .tabs li
+{
+    display: inline-flex;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 600;
+    border-left: 1px solid var(--gray);
+    padding-left: 22px;
+    margin-right: 16px;
+}
+
+#tabs .tabs li:first-child
+{
+    border: none;
+}
+
+#tabs .tabs li.active
+{
+    color: var(--cyan);
+}
+
+#tabs .tabs svg
+{
+    width: 16px;
+    height: 16px;
+    fill: var(--white);
+    margin: 0 5px 0 0;
+}
+
+#tabs .tabs li.active svg
+{
+    fill: var(--cyan);
+}
+
+#tabs .tabs .tabs-content
+{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+#tabs .tabs .tabs-content .pane
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    transform: translateY(100%);
+}
+
+#tabs .tabs .tabs-content .pane.active
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#tabs input
+{
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+    margin: 0 0 20px;
+    outline: none;
+}
+
+#tabs button
+{
+    background: var(--cyan);
+    color: var(--white);
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+}

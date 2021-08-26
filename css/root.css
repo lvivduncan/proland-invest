@@ -1,0 +1,38 @@
+
+
+*,
+::after,
+::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --white: #fff;
+    --black: #000;
+    --dark: #202020;
+    --cyan: #3fb8bd;
+    --gray: #ccc;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+
+.wrapper
+{
+    width: 1200px;
+    margin: auto;
+}
+
+@media(max-width:1240px)
+{
+    .wrapper
+    {
+        width: 95%;
+    }
+}
