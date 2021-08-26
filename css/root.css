@@ -13,14 +13,18 @@
 {
     --white: #fff;
     --black: #000;
-    --dark: #202020;
+    /* --dark: #202020; */
+    --dark: #13162b;
     --cyan: #3fb8bd;
     --gray: #ccc;
+    --light: #f4f8fb;
+    /* #13162b */
 }
 
 body
 {
     font-family: sans-serif;
+    color: var(--black);
 }
 
 .wrapper

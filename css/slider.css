@@ -1,0 +1,154 @@
+
+#slider .wrapper
+{
+    background: var(--light);
+    padding: 50px;
+}
+
+#slider h1
+{
+    text-align: center;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.slider
+{
+    position: relative;
+}
+
+.slider figure
+{
+    overflow: hidden;
+    width: 960px;
+    height: 530px;
+    margin: auto;
+    display: block;
+    position: relative;
+}
+
+.slider figure picture
+{
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider figure picture.active
+{
+    opacity: 1;
+}
+
+
+/* nav */
+.slider-nav
+{
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: 
+        linear-gradient(90deg, 
+            rgba(19,22,43,1) 0%, 
+            rgba(19,22,43,1) 50%, 
+            rgba(63,184,189,1) 50%, 
+            rgba(63,184,189,1) 100%);
+    color: var(--white);
+}
+
+.slider-left,
+.slider-right
+{
+    cursor: pointer;
+    padding: 5px;
+
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+.slider-right
+{
+    text-align: right;
+}
+
+.slider-left p,
+.slider-right p
+{
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.slider-left p::after
+{
+    content: '';
+    position: absolute;
+    left: 2px;
+    bottom: -8px;
+    border: solid var(--white);
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    
+    transform: rotate(135deg);
+}
+
+.slider-right p::after
+{
+    content: '';
+    position: absolute;
+    right: 2px;
+    bottom: -8px;
+    border: solid var(--white);
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    
+    transform: rotate(-45deg);
+}
+
+.slider-left p::before
+{
+    content: '';
+    position: absolute;
+    left: 2px;
+    bottom: -5px;
+    width: 50px;
+    height: 1px;
+    background: var(--white);
+}
+
+.slider-right p::before
+{
+    content: '';
+    position: absolute;
+    right: 2px;
+    bottom: -5px;
+    width: 50px;
+    height: 1px;
+    background: var(--white);
+}
+
+.slider-left span,
+.slider-right span
+{
+    font-size: 12px;
+}
+
