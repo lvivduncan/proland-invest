@@ -1,0 +1,87 @@
+#place
+{
+    background: url('../images/maps.jpg') no-repeat;
+    background-size: cover;
+    min-height: 940px;
+    padding: 10px;
+}
+
+#place h1
+{
+    background: var(--dark);
+    color: var(--white);
+    margin: auto;
+    padding: 5px;
+}
+
+#map
+{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5px 20px;
+    grid-template-areas: 
+        'map-desc map-place'
+        'map-button map-place';
+    grid-template-rows: 1fr auto;
+}
+
+#map-desc
+{
+    grid-area: map-desc;
+    background: var(--white);
+}
+
+#map-desc picture
+{
+    display: block;
+    width: 100%;
+}
+
+#map-desc picture img
+{
+    width: 100%;
+}
+
+#map-desc figcaption
+{
+    padding: 10px 0;
+}
+
+#map-desc h2
+{
+    font-weight: 700;
+    font-size: 24px;
+    transform: scaleX(.8);
+    line-height: 30px;
+    margin: 0 -25px 10px;
+}
+
+#map-desc p
+{
+    font-size: 21px;
+    margin: 0 20px 10px;
+}
+
+#map-button
+{
+    grid-area: map-button;
+
+    background: var(--cyan);
+    color: var(--white);
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+
+    text-decoration: none;
+    text-align: center;
+}
+
+#map-place
+{
+    grid-area: map-place;
+    width: 725px;
+    height: 680px;
+}

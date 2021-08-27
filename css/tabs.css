@@ -54,10 +54,7 @@
 
 #tabs h1
 {
-    text-transform: uppercase;
     color: var(--white);
-    font-size: 50px;
-    font-weight: 500;
     position: relative;
     z-index: 4;
 }

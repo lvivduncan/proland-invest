@@ -21,7 +21,7 @@
 
 #skill h1
 {
-    font-size: 50px;
+    /* font-size: 50px; */
     color: var(--cyan);
     margin: 0 0 10px;
     line-height: 1;

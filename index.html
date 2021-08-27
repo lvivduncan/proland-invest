@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home: proland invest</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,9 +13,11 @@
     <header id="header">
         <div class="wrapper">
             <a href="#" id="logo">
-                <span style="display: flex; width: 450px; height: 56px; outline: 1px solid var(--white); color: var(--white); align-items: center; justify-content: center;">
-                    логотип
-                </span>
+                <picture>
+                    <!-- <source srcset="images/logo.avif" type="image/avif"> -->
+                    <!-- <source srcset="images/logo.webp" type="image/webp"> -->
+                    <img src="images/logo.png" alt="">
+                </picture>
             </a>
 
             <div id="phone">
@@ -22,7 +25,7 @@
                 <a href="tel:+38 (096) 294 28 71" title="call!">+38 (096) 294 28 71</a>
             </div>
             <div id="menu">
-                <span style="display: flex; width: 40px; height: 40px; outline: 1px solid var(--white); color: var(--white); align-items: center; justify-content: center;"></span>
+                <svg width="36" height="37" viewBox="0 0 36 37" fill="none"><path d="M15.41 0.25H0.0500488V15.61H15.41V0.25Z" fill="var(--white)"/><path d="M35.87 0.25H20.51V15.61H35.87V0.25Z" fill="white"/><path d="M15.41 20.75H0.0500488V36.11H15.41V20.75Z" fill="var(--white)"/><path d="M35.87 20.75H20.51V36.11H35.87V20.75Z" fill="var(--white)"/></svg>
             </div>
         </div>
     </header>
@@ -142,7 +145,7 @@
 
     <div id="gallery">
         <div class="wrapper">
-            <a href="/">
+            <a href="#">
                 <picture>
                     <source srcset="temp/slider-1.avif" type="image/avif">
                     <source srcset="temp/slider-1.webp" type="image/webp">
@@ -152,7 +155,7 @@
                     Назва об'єкта
                 </span>
             </a>
-            <a href="/">
+            <a href="#">
                 <picture>
                     <source srcset="temp/slider-2.avif" type="image/avif">
                     <source srcset="temp/slider-2.webp" type="image/webp">
@@ -162,7 +165,7 @@
                     Назва об'єкта
                 </span>
             </a>
-            <a href="/">
+            <a href="#">
                 <picture>
                     <source srcset="temp/slider-3.avif" type="image/avif">
                     <source srcset="temp/slider-3.webp" type="image/webp">
@@ -172,7 +175,7 @@
                     Назва об'єкта
                 </span>
             </a>
-            <a href="/">
+            <a href="#">
                 <picture>
                     <source srcset="temp/slider-2.avif" type="image/avif">
                     <source srcset="temp/slider-2.webp" type="image/webp">
@@ -182,7 +185,7 @@
                     Назва об'єкта
                 </span>
             </a>
-            <a href="/">
+            <a href="#">
                 <picture>
                     <source srcset="temp/slider-3.avif" type="image/avif">
                     <source srcset="temp/slider-3.webp" type="image/webp">
@@ -192,7 +195,7 @@
                     Назва об'єкта
                 </span>
             </a>
-            <a href="/">
+            <a href="#">
                 <picture>
                     <source srcset="temp/slider-1.avif" type="image/avif">
                     <source srcset="temp/slider-1.webp" type="image/webp">
@@ -206,7 +209,43 @@
         </div>
     </div>
 
+    <section id="place">
+        <div class="wrapper">
+            <h1>ДІЛЯНКИ НА ПРОДАЖ</h1>
+
+            <div id="map">
+
+                <figure id="map-desc">
+                    <picture>
+                        <img src="temp/temp-1.jpg" alt="">
+                    </picture>
+                    <figcaption>
+                        <h2>Земельна ділянка в Брюховичах</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisc-ing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer-citation ullamco laboris nisi ut aliquip ex ea com-modo consequat. </p>
+                    </figcaption>
+                </figure>
+
+                <a href="#" id="map-button">
+                    Подати заявку
+                </a>
+
+                <div id="map-place"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="company">
+        <h1>Компанії, які нам довіряють</h1>
+        
+    </section>
+
     <div style="height: 600px;"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script>
+
+	</script>
+
     <script src="js/script.js"></script>
 </body>
 </html>

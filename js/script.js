@@ -81,3 +81,18 @@
         numbers.innerHTML = `<strong>${length}</strong><span>${counter+1}</span>`;
     }
 }
+
+
+let mymap = L.map('map-place').setView([49.899444, 23.943889], 15);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+}).addTo(mymap);
+
+let marker1 = L.marker([49.899444, 23.943889]).addTo(mymap);
+let marker2 = L.marker([49.898427, 23.950218]).addTo(mymap);

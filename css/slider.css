@@ -5,15 +5,6 @@
     padding: 50px;
 }
 
-#slider h1
-{
-    text-align: center;
-    margin: 0 0 30px;
-    text-transform: uppercase;
-    font-size: 50px;
-    font-weight: 500;
-}
-
 .slider
 {
     position: relative;
