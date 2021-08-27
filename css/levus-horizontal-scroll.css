@@ -1,0 +1,162 @@
+.levus-horizontal-scroll
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.levus-horizontal-scroll ul
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(20,25%);
+    left: -25%;
+}
+
+@media (max-width: 996px)
+{
+    .levus-horizontal-scroll ul
+    {
+        left: -33.333333%;
+        grid-template-columns: repeat(20,33.333333%);
+    }
+}
+
+@media (max-width: 776px)
+{
+    .levus-horizontal-scroll ul
+    {
+        left: -50%;
+        grid-template-columns: repeat(20,50%);
+    }
+}
+
+@media (max-width: 500px)
+{
+    .levus-horizontal-scroll ul
+    {
+        left: -100%;
+        grid-template-columns: repeat(20,100%);
+    }
+}
+
+.to-left
+{
+    transform: translateX(25%);
+}
+
+.to-right
+{
+    transform: translateX(-25%);
+}
+
+@media (max-width: 996px)
+{
+    .to-left
+    {
+        transform: translateX(33.333333%);
+    }
+    .to-right
+    {
+        transform: translateX(-33.333333%);
+    }
+}
+
+@media (max-width: 776px)
+{
+    .to-left
+    {
+        transform: translate(50%);
+    }
+    .to-right
+    {
+        transform: translate(-50%);
+    }
+}
+
+@media (max-width: 500px)
+{
+    .to-left
+    {
+        transform: translateX(100%);
+    }
+    .to-right
+    {
+        transform: translateX(-100%);
+    }
+}
+
+.levus-horizontal-scroll li
+{
+    display: block;
+    padding: 10px;
+}
+
+.levus-horizontal-scroll li article
+{
+    box-shadow: 2px 2px 2px rgba(63, 184, 189,.5);
+    /* margin: 0 10px; */
+}
+
+/* заголовок блоку */
+.levus-horizontal-scroll li h2
+{
+    background: var(--dark);
+    color: var(--white);
+    min-height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* left/right arrows */
+.levus-horizontal-scroll .levus-nav
+{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+    width: 100%
+}
+
+.levus-horizontal-scroll .left,
+.levus-horizontal-scroll .right
+{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #f4f4f4;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.levus-horizontal-scroll .left
+{
+    left: 10px;
+}
+
+.levus-horizontal-scroll .left::before
+{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAARElEQVR4Ae3OAQYAIBQE0Y/u21H2IB2yYEGAFEvzGACmAADvdRczM12PmXEjbaYxwwwzh7QNqez3KaaYYkoVQu4GAMACdpNBa8xOosUAAAAASUVORK5CYII=") center center no-repeat;
+}
+
+.levus-horizontal-scroll .right
+{
+    right: 10px;
+}
+
+.levus-horizontal-scroll .right::before
+{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAS0lEQVR4Ae3OsQ0AEBQGYYXSrkZ5gxjDYJA8jVKIv7gvuf4CAOCe7MnMNE9iqo6a0lRiiimmPoijsg0ZM8wwc0hqZjKlmcU8AMBLHcNiQx9bPHBBAAAAAElFTkSuQmCC") center center no-repeat;
+}
