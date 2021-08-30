@@ -2,7 +2,7 @@
 
 @import url('./header.css');
 
-@import url('./tabs.css');
+@import url('./tab.css');
 
 @import url('./skill.css');
 
@@ -16,10 +16,10 @@
 
 @import url('./levus-horizontal-scroll.css');
 
-/* @import url('./faq.css'); */
+@import url('./faq.css');
 
-/* @import url('./sertyficat.css'); */
+@import url('./doc.css');
 
-/* @import url('./feedback.css'); */
+@import url('./feedback.css');
 
-/* @import url('./footer.css'); */
+@import url('./footer.css');

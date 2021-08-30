@@ -1,7 +1,23 @@
 .levus-horizontal-scroll
 {
+    position: relative;
+}
+
+.levus-slides
+{
     overflow: hidden;
     position: relative;
+    z-index: 3;
+    width: 1640px;
+    margin: auto;
+}
+
+@media(max-width: 1660px)
+{
+    .levus-slides
+    {
+        width: 95%;
+    }
 }
 
 .levus-horizontal-scroll ul
@@ -10,6 +26,8 @@
     display: grid;
     grid-template-columns: repeat(20,25%);
     left: -25%;
+
+    background: var(--white);
 }
 
 @media (max-width: 996px)
@@ -89,12 +107,14 @@
 {
     display: block;
     padding: 10px;
+
+    background: var(--white);
 }
 
 .levus-horizontal-scroll li article
 {
-    box-shadow: 2px 2px 2px rgba(63, 184, 189,.5);
-    /* margin: 0 10px; */
+    box-shadow: 0 0 12px rgba(63, 184, 189,.5);
+    text-align: center;
 }
 
 /* заголовок блоку */
@@ -105,8 +125,19 @@
     min-height: 80px;
     line-height: 80px;
     font-size: 24px;
-    text-align: center;
     font-weight: 700;
+    transition: .5s;
+}
+
+.levus-horizontal-scroll li:hover h2
+{
+    background: var(--cyan);
+}
+
+.levus-horizontal-scroll li p
+{
+    padding: 10px;
+    line-height: 1.6;
 }
 
 
@@ -114,49 +145,76 @@
 .levus-horizontal-scroll .levus-nav
 {
     position: absolute;
-    top: calc(50% - 20px);
+    top: 300px;
     left: 0;
-    width: 100%
+    bottom: 50px;
+    width: 100%;
+
+    background: linear-gradient(90deg, 
+            rgba(19,22,43,1) 0%, 
+            rgba(19,22,43,1) 50%, 
+            rgba(63,184,189,1) 50%, 
+            rgba(63,184,189,1) 100%);
+    color: var(--white);
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-gap: 1200px; */
+    grid-gap: 1640px;
+}
+
+@media(max-width: 1660px)
+{
+    .levus-horizontal-scroll .levus-nav
+    {
+        grid-gap: 0;
+    }
 }
 
 .levus-horizontal-scroll .left,
 .levus-horizontal-scroll .right
 {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background: #f4f4f4;
-    position: absolute;
-    top: 5px;
+    display: block;
     cursor: pointer;
     z-index: 1;
+
+    height: 100%;
+    position: relative;
 }
 
-.levus-horizontal-scroll .left
+@media(max-width: 1660px)
 {
-    left: 10px;
+    .levus-horizontal-scroll .left,
+    .levus-horizontal-scroll .right
+    {
+        display: none;
+    }
 }
 
 .levus-horizontal-scroll .left::before
 {
-    content: "";
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAARElEQVR4Ae3OAQYAIBQE0Y/u21H2IB2yYEGAFEvzGACmAADvdRczM12PmXEjbaYxwwwzh7QNqez3KaaYYkoVQu4GAMACdpNBa8xOosUAAAAASUVORK5CYII=") center center no-repeat;
-}
-
-.levus-horizontal-scroll .right
-{
-    right: 10px;
+    content: '';
+    display: block;
+    width: 37px;
+    height: 65px;
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='66' viewBox='0 0 37 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.81006 33.1299L36.7101 5.22998L32.4701 0.98999L0.320068 33.1299L32.4701 65.28L36.7101 61.04L8.81006 33.1299Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: calc(50% - 20px);
+    /* left: calc(50% - 20px); */
+    right: 20px;
+    z-index: 4;
 }
 
 .levus-horizontal-scroll .right::before
 {
-    content: "";
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAS0lEQVR4Ae3OsQ0AEBQGYYXSrkZ5gxjDYJA8jVKIv7gvuf4CAOCe7MnMNE9iqo6a0lRiiimmPoijsg0ZM8wwc0hqZjKlmcU8AMBLHcNiQx9bPHBBAAAAAElFTkSuQmCC") center center no-repeat;
+    content: '';
+    display: block;
+    width: 37px;
+    height: 65px;
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='65' viewBox='0 0 37 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.0999 32.7L0.189819 60.6001L4.43982 64.8401L36.5798 32.7L4.43982 0.550049L0.189819 4.79004L28.0999 32.7Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: calc(50% - 20px);
+    /* right: calc(50% - 20px);   */
+    left: 20px;
+    z-index: 4;  
 }
