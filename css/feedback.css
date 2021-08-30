@@ -17,8 +17,9 @@
 
 #feedback picture img
 {
-    object-fit: cover;
+    /* object-fit: cover; */
     /* object-fit: contain; */
+    width: 100%;
 }
 
 #feedback::before
