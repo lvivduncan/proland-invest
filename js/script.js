@@ -163,59 +163,28 @@
 
 // parallax
 {
-    // обгортка
-    // const parallax = document.querySelector('.levus-parallax');
-  
-    // if (parallax != null) {
-  
+    const feedback = document.querySelector('#feedback');
 
-  
-      // елементи 
-    //   const articles = document.querySelectorAll('.levus-parallax article');
+    const offsetTop = feedback.offsetTop;
 
-      // 1 block
-      const feedback = document.getElementById('feedback');
+    const parallax = feedback.querySelector('picture img');
+        
+    window.addEventListener('scroll', () => {
+        
+    const hightWindow = document.documentElement.clientHeight;
 
-      // відступ згори від батьківського елемента (у нашому випадку -- body) до паралаксу
-      const offsetTop = feedback.offsetTop;      
-  
-      // вішаємо подію "скрол"
-      window.addEventListener('scroll', () => {
-  
-        // розмір вікна
-        const hightWindow = document.documentElement.clientHeight;
-  
-        // відстань прокрутки
-        const scroll = window.pageYOffset;
+    const scroll = window.pageYOffset;
 
-          // час вмикання анімації (коли розмір видимого вікна + прокрутка більша за відступ до блока)
-          if (hightWindow + scroll > offsetTop) {
-  
-            // при прокрутці фон отримує зсув
-            feedback.style.backgroundPositionY = `-${(hightWindow + scroll - offsetTop) / 3}px`;
-          } else {
-  
-            // видаляємо стилі
-            feedback.removeAttribute('style');
-          }        
-  
-        // articles.forEach(article => {
-  
-        //   // час вмикання анімації (коли розмір видимого вікна + прокрутка більша за відступ до блока)
-        //   if (hightWindow + scroll > offsetTop) {
-  
-        //     // при прокрутці фон отримує зсув
-        //     article.style.backgroundPositionY = `-${(hightWindow + scroll - offsetTop) / 3}px`;
-        //   } else {
-  
-        //     // видаляємо стилі
-        //     article.removeAttribute('style');
-        //   }
-  
-        // });
-  
-      });
-    // }
+        if (hightWindow + scroll > offsetTop) {
+
+            const offset = Math.round((hightWindow + scroll - offsetTop) / 3);
+
+            parallax.style.transform = `translateY(-${offset}px)`;
+        } else {
+
+            parallax.removeAttribute('style');
+        }
+    });
 }
 
 
