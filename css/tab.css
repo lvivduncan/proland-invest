@@ -20,6 +20,39 @@
     overflow: hidden;
 }
 
+#tab .wrapper picture
+{
+    width: 100%;
+    height: 630px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#tab .wrapper picture::before
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.25);
+}
+
+#tab .wrapper picture::after
+{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    background: rgba(0,0,0,.5);
+}
+
 #tab .video
 {
     position: absolute;
@@ -93,6 +126,7 @@
     background: var(--cyan);
 }
 
+/* tabs */
 #tab .tabs
 {
     text-align: center;
