@@ -1,8 +1,8 @@
 
 {
     // tabs
-    const tabs = document.querySelectorAll('#tabs .tabs ul li');
-    const panes = document.querySelectorAll('#tabs .tabs .tabs-content .pane');
+    const tabs = document.querySelectorAll('#tab .tabs ul li');
+    const panes = document.querySelectorAll('#tab .tabs .tabs-content .pane');
 
     for(let i = 0, length = tabs.length; i < length; i++){
 
@@ -24,11 +24,11 @@
 {
     // slider
     const slider = document.querySelector('.slider');
-    const slides = slider.querySelectorAll('picture');
-    const left = slider.querySelector('.slider-left');
-    const right = slider.querySelector('.slider-right');
-    const numbers = slider.querySelector('.slider-numbers');
-    const length = slides.length;
+        const slides = slider.querySelectorAll('picture');
+        const left = slider.querySelector('.slider-left');
+        const right = slider.querySelector('.slider-right');
+        const numbers = slider.querySelector('.slider-numbers');
+            const length = slides.length;
 
     let counter = 0;
 

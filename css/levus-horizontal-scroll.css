@@ -8,11 +8,19 @@
     overflow: hidden;
     position: relative;
     z-index: 3;
-    width: 1640px;
+    /* width: 1640px; */
+    width: 1200px;
     margin: auto;
 }
 
-@media(max-width: 1660px)
+/* @media(max-width: 1660px)
+{
+    .levus-slides
+    {
+        width: 95%;
+    }
+} */
+@media(max-width: 1240px)
 {
     .levus-slides
     {
@@ -159,11 +167,18 @@
 
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    /* grid-gap: 1200px; */
-    grid-gap: 1640px;
+    /* grid-gap: 1640px; */
+    grid-gap: 1200px;
 }
 
-@media(max-width: 1660px)
+/* @media(max-width: 1660px)
+{
+    .levus-horizontal-scroll .levus-nav
+    {
+        grid-gap: 0;
+    }
+} */
+@media(max-width: 1240px)
 {
     .levus-horizontal-scroll .levus-nav
     {
@@ -182,7 +197,16 @@
     position: relative;
 }
 
-@media(max-width: 1660px)
+/* @media(max-width: 1660px)
+{
+    .levus-horizontal-scroll .left,
+    .levus-horizontal-scroll .right
+    {
+        display: none;
+    }
+} */
+
+@media(max-width: 1240px)
 {
     .levus-horizontal-scroll .left,
     .levus-horizontal-scroll .right

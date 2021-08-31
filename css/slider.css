@@ -1,7 +1,10 @@
+#slider
+{
+    background: var(--light);
+}
 
 #slider .wrapper
 {
-    background: var(--light);
     padding: 50px;
 }
 
