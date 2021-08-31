@@ -25,9 +25,8 @@
     position: relative;
 }
 
-#phone::before
+#phone span
 {
-    content: '';
     display: inline-block;
     position: absolute;
     top: calc(50% - 16px);
@@ -41,12 +40,29 @@
     border: 1px solid var(--white);
 }
 
-#phone a
+@media(max-width: 776px)
+{
+    #phone span
+    {
+        left: 0;
+        cursor: pointer;
+    }
+}
+
+#phone > a
 {
     color: var(--white);
     text-decoration: none;
     display: block;
     margin: 5px 0;
+}
+
+@media(max-width: 776px)
+{
+    #phone > a
+    {
+        display: none;
+    }
 }
 
 #menu

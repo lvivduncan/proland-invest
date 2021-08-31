@@ -11,6 +11,22 @@
     grid-gap: 20px;
 }
 
+@media(max-width:1140px)
+{
+    #faq .wrapper
+    {
+        width: 95%;
+    }
+}
+
+@media(max-width:600px)
+{
+    #faq .wrapper
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
 #faq article
 {
     display: grid;

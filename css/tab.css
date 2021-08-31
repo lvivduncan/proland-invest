@@ -8,9 +8,17 @@
     z-index: 1;
 }
 
+/* @media(max-width:1100px)
+{
+    #tab
+    {
+        height: 540px;
+    }
+} */
+
 #tab .wrapper
 {
-    height: 630px;
+    height: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -23,7 +31,7 @@
 #tab .wrapper picture
 {
     width: 100%;
-    height: 630px;
+    height: 100%;
     display: block;
     position: absolute;
     top: 0;
@@ -65,6 +73,17 @@
     opacity: 1;
 }
 
+@media(max-width:1100px)
+{
+    #tab .video
+    {
+        top: 0;
+        padding-top: 0;
+        transform: translateY(0);
+        height: 100%;
+    }
+}
+
 #tab .video video
 {
     position: absolute;
@@ -72,6 +91,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #tab .video::before
@@ -95,6 +115,18 @@
     top: 0;
     left: 25%;
     background: rgba(0,0,0,.5);
+}
+
+@media(max-width:1100px)
+{
+    #tab .video::after
+    {
+        width: 100%;
+        /* height: 100%; */
+        /* position: absolute; */
+        /* top: 0; */
+        left: 0;        
+    }
 }
 
 #tab h1
@@ -136,11 +168,27 @@
     z-index: 4;
 }
 
+@media(max-width:400px)
+{
+    #tab .tabs
+    {
+        width: 95%;
+    }
+}
+
 #tab .tabs ul
 {
     display: block;
     margin: 40px 0;
     text-align: center;
+}
+
+@media(max-width:1100px)
+{
+    #tab .tabs ul
+    {
+        margin: 20px 0;
+    }
 }
 
 #tab .tabs li
@@ -153,6 +201,16 @@
     border-left: 1px solid var(--gray);
     padding-left: 22px;
     margin-right: 16px;
+}
+
+@media(max-width:1140px)
+{
+    #tab .tabs li
+    {
+        padding: 15px;
+        margin: 0;
+        border: none;
+    }
 }
 
 #tab .tabs li:first-child
@@ -202,14 +260,27 @@
     transform: translateY(0);
 }
 
+#tab form
+{
+    width: 300px;
+}
+
+@media(max-width:400px)
+{
+    #tab form
+    {
+        width: 95%;
+    }
+}
+
 #tab input
 {
     padding: 10px;
-    width: 300px;
     display: inline-block;
     margin: 0 0 20px;
     outline: none;
     font-size: 18px;
+    width: 100%;
 }
 
 #tab button
@@ -223,4 +294,5 @@
     border: none;
     font-size: 18px;
     font-weight: 700;
+    width: 100%;
 }

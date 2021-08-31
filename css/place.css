@@ -26,6 +26,14 @@
     grid-template-rows: 1fr auto;
 }
 
+@media(max-width:1240px)
+{
+    #map
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
 #map-desc
 {
     grid-area: map-desc;
@@ -86,6 +94,6 @@
 #map-place
 {
     grid-area: map-place;
-    width: 725px;
+    /* width: 725px; */
     height: 680px;
 }

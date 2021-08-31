@@ -11,6 +11,22 @@
     grid-gap: 20px;
 }
 
+@media(max-width:996px)
+{
+    #doc .wrapper
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px)
+{
+    #doc .wrapper
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
 #doc article
 {
     background: var(--dark);

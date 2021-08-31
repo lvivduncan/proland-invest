@@ -46,6 +46,25 @@
     grid-gap: 100px 80px;
 }
 
+@media(max-width:1140px)
+{
+    #feedback .wrapper
+    {
+        width: 95%;
+        left: 2.5%;
+        grid-gap: 20px;
+    }
+}
+
+@media(max-width:996px)
+{
+    #feedback .wrapper
+    {
+        grid-template-columns: 1fr;
+        top: 20px;
+    }    
+}
+
 #feedback ul,
 #feedback ol
 {
