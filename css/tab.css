@@ -8,13 +8,13 @@
     z-index: 1;
 }
 
-/* @media(max-width:1100px)
+@media(max-width:600px)
 {
     #tab
     {
         height: 540px;
     }
-} */
+}
 
 #tab .wrapper
 {
@@ -168,11 +168,11 @@
     z-index: 4;
 }
 
-@media(max-width:400px)
+@media(max-width:600px)
 {
     #tab .tabs
     {
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -243,6 +243,14 @@
     position: relative;
 }
 
+@media(max-width:600px)
+{
+    #tab .tabs .tabs-content
+    {
+        height: 110px;
+    }    
+}
+
 #tab .tabs .tabs-content .pane
 {
     position: absolute;
@@ -263,9 +271,10 @@
 #tab form
 {
     width: 300px;
+    margin: auto;
 }
 
-@media(max-width:400px)
+@media(max-width:776px)
 {
     #tab form
     {

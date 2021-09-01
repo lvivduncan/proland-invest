@@ -187,8 +187,67 @@
     });
 }
 
+// mobile phone
+{
+    const phone = document.querySelector('#phone');
+    const span = phone.querySelector('span');
+    const ul = phone.querySelector('ul');
 
-let mymap = L.map('map-place').setView([49.899444, 23.943889], 15);
+    const body = document.getElementsByTagName('body')[0];
+
+    let flag = false;
+
+    mobilePhone();
+
+    window.addEventListener('resize', mobilePhone);
+
+    function mobilePhone(){
+
+        const cover = document.createElement('div');
+        cover.setAttribute('id', 'cover');
+
+        if(window.innerWidth < 776){
+            
+            span.addEventListener('click', () => {
+
+                ul.classList.add('active');
+                body.classList.add('overflow');
+
+                body.append(cover);
+            });
+
+            flag = true;
+        } else {
+
+            flag = false;
+        }
+        
+        document.addEventListener('click', e => {
+            if(e.target.id === 'cover'){
+
+                ul.classList.remove('active');
+                body.classList.remove('overflow');
+
+                cover.remove();
+            }
+        });        
+    }
+}
+
+// mobile menu
+{
+    const menu = document.getElementById('menu');
+}
+
+
+
+
+
+
+
+
+
+let mymap = L.map('map-place').setView([49.899444, 23.943889], 7);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',

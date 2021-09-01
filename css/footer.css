@@ -1,15 +1,26 @@
 #footer
 {
     height: 80px;
-    line-height: 80px;
+    /* line-height: 80px; */
     background: var(--black);
     color: var(--white);
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer p
+{
+    padding: 0 10px;
     text-align: center;
 }
 
 #footer a
 {
     color: var(--white);
+    /* display: block; */
+    /* text-align: center; */
 }
 
 #footer a:hover

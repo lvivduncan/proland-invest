@@ -6,6 +6,11 @@
     padding: 10px;
 }
 
+#place .wrapper
+{
+    position: relative;
+}
+
 #place h1
 {
     background: var(--dark);
@@ -34,9 +39,23 @@
     }
 }
 
+@media(max-width:600px)
+{
+    #map
+    {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-template-areas: 
+            'map-place'
+            'map-desc'
+            'map-button'
+    }    
+}
+
 #map-desc
 {
     grid-area: map-desc;
+
     background: var(--white);
 }
 
@@ -67,7 +86,6 @@
 
 #map-desc p
 {
-    /* font-size: 21px; */
     font-size: 18px;
     margin: 0 20px 10px;
     line-height: 1.6;
@@ -94,6 +112,14 @@
 #map-place
 {
     grid-area: map-place;
-    /* width: 725px; */
+
     height: 680px;
+}
+
+@media(max-width:600px)
+{
+    #map-place
+    {
+        height: 400px;
+    }
 }

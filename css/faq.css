@@ -41,6 +41,15 @@
     transition: .5s;
 }
 
+@media(max-width:600px)
+{
+    #faq article
+    {
+        display: block;
+        text-align: center;
+    }
+}
+
 #faq article:hover
 {
     /* background: #F0F0F1; */
@@ -61,6 +70,14 @@
     height: 100px!important;
     /* border-radius: 100px; */
     object-fit: cover;
+}
+
+@media(max-width:600px)
+{
+    #faq article picture img
+    {
+        display: none;
+    }
 }
 
 #faq article h2
@@ -90,3 +107,10 @@
     top: 5px;
 }
 
+@media(max-width:600px)
+{
+    #faq article p a
+    {
+        float: none;
+    }
+}

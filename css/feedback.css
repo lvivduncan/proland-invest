@@ -6,6 +6,14 @@
     overflow: hidden;
 }
 
+@media(max-width:500px)
+{
+    #feedback
+    {
+        height: 500px;
+    }
+}
+
 #feedback .bg
 {
     position: absolute;
@@ -18,6 +26,16 @@
 #feedback .bg img
 {
     width: 100%;
+}
+
+@media(max-width:500px)
+{
+    #feedback .bg img
+    {
+        transform: translateX(0)!important;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 #feedback::before
@@ -56,7 +74,7 @@
     }
 }
 
-@media(max-width:996px)
+@media(max-width:776px)
 {
     #feedback .wrapper
     {
@@ -64,6 +82,24 @@
         top: 20px;
     }    
 }
+
+@media(max-width:776px)
+{
+    .logo
+    {
+        display: block;
+        margin: 0 0 10px;
+    }
+}
+
+@media(max-width:500px)
+{
+    .logo
+    {
+        text-align: center;
+    }
+}
+
 
 #feedback ul,
 #feedback ol
@@ -75,6 +111,19 @@
 {
     margin: 0 0 20px;
     display: block;
+}
+
+@media(max-width:500px)
+{
+    #feedback li
+    {
+        text-align: center;
+    }
+}
+
+#feedback li:last-child
+{
+    margin: 0;
 }
 
 #feedback li a
@@ -101,6 +150,16 @@
     cursor: pointer;
 }
 
+@media(max-width:500px)
+{
+    #feedback label
+    {
+        width: 100%;
+        text-align: center;
+        top: -25px;
+    }
+}
+
 #feedback input
 {
     font-family: inherit;
@@ -109,6 +168,7 @@
     border: none;
     font-size: 18px;
     height: 52px;
+    width: 100%;
 }
 
 #feedback button
@@ -134,11 +194,28 @@
     justify-content: space-between;
 }
 
+@media(max-width:500px)
+{
+    #contact
+    {
+        display: block;
+    }
+}
+
 #contact .social 
 {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media(max-width:500px)
+{
+    #contact .social
+    {
+        margin: 20px 0 0;
+        justify-content: center;
+    }
 }
 
 #contact .social svg
